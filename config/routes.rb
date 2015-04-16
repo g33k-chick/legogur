@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'legosets' => 'legosets#index'
+
 end
 
   # The priority is based upon order of creation: first created -> highest priority.
