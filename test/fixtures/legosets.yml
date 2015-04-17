@@ -2,14 +2,14 @@
 
 one:
   name: MyString
-  type: 
+  product_type: MyString
   pieces: 1
   minifigures: 1
   url: MyString
 
 two:
   name: MyString
-  type: 
+  product_type: MyString
   pieces: 1
   minifigures: 1
   url: MyString

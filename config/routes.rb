@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'legosets' => 'legosets#index'
+  get 'legosets/:id' => 'legosets#show', as: 'legoset'
 
 end
 

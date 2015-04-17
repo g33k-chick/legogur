@@ -1,7 +1,11 @@
 class LegosetsController < ApplicationController
 
 	def index
-		@Legosets = Legoset.all
+		@legosets = Legoset.all
+	end
+
+	def show
+		@legoset = Legoset.find(params[:id])
 	end
 
 end

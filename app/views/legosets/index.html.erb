@@ -1,6 +1,6 @@
 <h1>Lego Sets</h1>
 
 <% @legosets.each do |legoset| %>
-	<p><%= legoset.name %>, <%= legoset.type %></p>
+	<p><%= legoset.name %>, <%= legoset.product_type %></p>
 	<img src="<%= legoset.url %>">
-	<% end %>
+<% end %>
