@@ -9,9 +9,22 @@ class LegosetsController < ApplicationController
 	end
 
 	def new
+		@legoset = Legoset.new
 	end
 
 	def create
-		render :text => "Saving the Lego set.  URL: #{params[:url]}, Name: #{params[:name]}, Type: #{params[:product_type]}"
+		@legoset = Legoset.new(legoset_params)
+		if @legoset.save
+			redirect_to legosets_url
+		else
+		render :new
+		end
 	end
+
+	private
+
+	def legoset_params
+		params.require(:legoset).permit(:name, :product_type, :pieces, :minifigures, :url)
+	end
+
 end
