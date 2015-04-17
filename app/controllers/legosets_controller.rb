@@ -35,6 +35,12 @@ class LegosetsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@legoset = Legoset.find(params[:id])
+		@legoset.destroy
+		redirect_to legosets_url
+	end
+
 	private
 
 	def legoset_params
