@@ -8,4 +8,10 @@ class LegosetsController < ApplicationController
 		@legoset = Legoset.find(params[:id])
 	end
 
+	def new
+	end
+
+	def create
+		render :text => "Saving the Lego set.  URL: #{params[:url]}, Name: #{params[:name]}, Type: #{params[:product_type]}"
+	end
 end

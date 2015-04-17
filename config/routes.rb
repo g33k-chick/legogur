@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-
   get 'legosets' => 'legosets#index'
+
+  post 'legosets' => 'legosets#create'
+  get 'legosets/new' => 'legosets#new'
+
   get 'legosets/:id' => 'legosets#show', as: 'legoset'
 
 end
