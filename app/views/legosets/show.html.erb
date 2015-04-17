@@ -1,2 +1,4 @@
+<%= link_to "Back to Lego Sets", legosets_url %>
+
 <p><%= @legoset.name %>, <%= @legoset.product_type %></p>
-<img src="<%= @legoset.url %>">
+<%= image_tag @legoset.url %>

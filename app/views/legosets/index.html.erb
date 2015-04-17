@@ -1,6 +1,7 @@
-<h1>Lego Sets</h1>
+<h1>Lego Sets (<%= @legosets.length %>)</h1>
+<%= link_to "New Lego Sets", "/legosets/new" %>
 
 <% @legosets.each do |legoset| %>
 	<p><%= legoset.name %>, <%= legoset.product_type %></p>
-	<img src="<%= legoset.url %>">
+	<%= link_to image_tag(legoset.url), "/legosets/#{legoset.id}" %>
 <% end %>
