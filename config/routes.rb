@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   get 'legosets/:id' => 'legosets#show', as: 'legoset'
 
+  get 'legosets/:id/edit' => 'legosets#edit', as: 'edit_legoset'
+  patch 'legosets/:id' => 'legosets#update'
+
 end
 
   # The priority is based upon order of creation: first created -> highest priority.

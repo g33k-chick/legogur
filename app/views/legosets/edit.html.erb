@@ -1,0 +1,31 @@
+<h1>Edit Lego Set</h1>
+
+<p>
+	<%= link_to "Back", @legoset %>
+</p>
+
+<%= form_for @legoset do |f| %>
+	<p>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :product_type %><br>
+		<%= f.text_field :product_type %>
+	</p>
+	<p>
+		<%= f.label :pieces %><br>
+		<%= f.text_field :pieces %>
+	</p>
+	<p>
+		<%= f.label :minifigures %><br>
+		<%= f.text_field :minifigures %>
+	</p>
+	<p>
+		<%= f.label :url %><br>
+		<%= f.text_field :url %>
+	</p>
+	<p>
+		<%= f.submit %>
+	</p>
+	<% end %>

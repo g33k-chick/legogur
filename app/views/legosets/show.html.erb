@@ -1,4 +1,4 @@
-<%= link_to "Back to Lego Sets", legosets_url %>
+<%= link_to "Back to Lego Sets", legosets_url %> | <%= link_to "Edit", edit_legoset_path(@legoset) %>
 
 <p><%= @legoset.name %>, <%= @legoset.product_type %></p>
 <%= image_tag @legoset.url %>

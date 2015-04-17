@@ -21,6 +21,20 @@ class LegosetsController < ApplicationController
 		end
 	end
 
+	def edit
+		@legoset = Legoset.find(params[:id])
+	end
+
+	def update
+		@legoset = Legoset.find(params[:id])
+
+		if @legoset.update_attributes(legoset_params)
+			redirect_to "/legosets/#{@legoset.id}"
+		else
+			render :edit
+		end
+	end
+
 	private
 
 	def legoset_params
