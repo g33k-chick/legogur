@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'legosets#index'
   get 'legosets' => 'legosets#index'
 
   post 'legosets' => 'legosets#create'
